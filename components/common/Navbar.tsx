@@ -60,14 +60,12 @@ export default function Navbar() {
                       <NavigationMenuLink
                         asChild
                         className={cn(
-                          // 1. SHARED BASE STYLES
                           "px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 border-2 hover:bg-white/5",
 
-                          // 2. CONDITIONAL LOGIC
                           isActive
-                            ? // ACTIVE STATE: Constant white background, subtle grey hover
+                            ? 
                               "bg-white/4 text-[#00A3C2] border-[#00A3C2]"
-                            : // INACTIVE STATE: Dark background, cyan border only on hover
+                            : 
                               "bg-transparent border-transparent text-zinc-400 hover:text-[#00A3C2] hover:border-white/3",
                         )}  
                       >
