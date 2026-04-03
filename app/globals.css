@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -16,7 +18,7 @@
   
   /* text */
   --color-text-black: var(--text-black);
-  --color-text-dark-gray: var(--text=dark-gray);
+  --color-text-dark-gray: var(--text-dark-gray);
   --color-text-gray: var(--text-gray);
   --color-text-light-gray: var(--text-light-gray);
   --color-text-cyan: var(--text-cyan);
@@ -110,6 +112,20 @@
 }
 
 @layer base {
-  * { @apply border-border outline-ring/50; }
-  body { @apply bg-background text-foreground transition-colors duration-300; }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--text-dark-gray); 
+    border-radius: 10px;
+    border: 2px solid transparent; 
+    background-clip: content-box;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-greyish-cyan); 
+    background-clip: content-box;
+} 
 }

@@ -38,7 +38,7 @@ export default function Navbar() {
     <header
       className={cn(
         inter.className,
-        "sticky top-5 z-50 w-[95%] max-w-7xl mx-auto rounded-full",
+        "absolute top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl mx-auto rounded-full",
         "backdrop-blur-md border border-darkblue text-text-black py-2 px-4 md:px-6 shadow-lg shadow-primary/4",
       )}
     >
@@ -99,7 +99,7 @@ export default function Navbar() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:bg-white/50 rounded-full"
+                className="text-foreground hover:bg-text-light-gray rounded-full"
               >
                 <Menu className="h-8 w-8" />
                 <span className="sr-only">Toggle menu</span>
