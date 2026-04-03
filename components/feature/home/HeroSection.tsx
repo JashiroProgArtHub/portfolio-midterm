@@ -7,9 +7,8 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen w-full bg-background text-foreground flex items-center px-6 md:px-20 py-20 md:py-0 overflow-hidden">
+    <section className="relative min-h-screen w-full bg-background text-foreground flex items-center px-6 md:px-20 py-20 md:py-0 overflow-hidden ">
       
-      {/* 1. Social Sidebar - Global text-gray and text-cyan hover */}
       <div className="hidden md:flex absolute left-8 bottom-20 flex-col items-center gap-6">
         <div className="flex flex-col gap-4">
           <a href="#" className="text-text-gray hover:text-text-cyan transition-colors"><FaFacebook size={20} /></a>
@@ -26,9 +25,7 @@ const HeroSection = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 w-full items-center gap-12 max-w-7xl mx-auto">
         
-        {/* 2. Content Area */}
         <div className="space-y-6 z-10 md:ml-12 order-2 md:order-1 text-center md:text-left">
-          {/* Border uses primary brand color */}
           <div className="inline-block border-l-4 md:border-l-2 border-primary pl-4">
             <p className="text-lg md:text-xl font-medium text-text-gray mb-2 uppercase tracking-wide">
               Hey, I'm Jashen
@@ -45,16 +42,13 @@ const HeroSection = () => {
             looking to scale their digital presence.
           </p>
           <div className="flex justify-center md:justify-start gap-4">
-            {/* Button uses global primary variables */}
             <Button size="lg" className="rounded-full bg-primary hover:opacity-90 text-primary-foreground px-8 w-full sm:w-auto">
               Get Started Now
             </Button>
           </div>
         </div>
 
-        {/* 3. Photo Area */}
         <div className="relative flex justify-center items-center order-1 md:order-2">
-          {/* Border uses global border variable */}
           <div className="relative w-full max-w-[300px] sm:max-w-md aspect-square rounded-2xl overflow-hidden border border-border">
             <Image 
               src={Photo}
@@ -62,16 +56,12 @@ const HeroSection = () => {
               className="object-cover w-full h-full"
               priority
             />
-            {/* Overlay uses the background variable for seamless blending */}
-            {/* <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" /> */}
           </div>
           
-          {/* Decorative Glow uses primary color with opacity */}
           <div className="absolute -z-10 w-64 h-64 bg-primary/10 blur-[100px] rounded-full" />
         </div>
       </div>
       
-      {/* Mobile Socials */}
       <div className="flex md:hidden absolute bottom-8 left-0 right-0 justify-center gap-8 text-text-gray">
           <a href="#" className="hover:text-text-cyan"><FaFacebook size={24} /></a>
           <a href="#" className="hover:text-text-cyan"><FaInstagram size={24} /></a>
