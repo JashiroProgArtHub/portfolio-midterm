@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";
 import { Menu } from "lucide-react"; 
+import {ThemeToggle} from "@/components/ui/theme-toggle"
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -38,7 +39,7 @@ export default function Navbar() {
       className={cn(
         inter.className,
         "sticky top-5 z-50 w-[95%] max-w-7xl mx-auto rounded-full",
-        "backdrop-blur-md border border-[#00A3C2]/20 bg-gray-900/40 text-white py-2 px-4 md:px-6",
+        "backdrop-blur-md border border-darkblue text-text-black py-2 px-4 md:px-6 shadow-lg shadow-primary/4",
       )}
     >
       <div className="flex h-12 md:h-14 items-center justify-between">
@@ -46,7 +47,7 @@ export default function Navbar() {
           href="/"
           className="flex gap-2 md:gap-3 items-center group shrink-0"
         >
-          <Avatar className="h-8 w-8 md:h-10 md:w-10 border border-[#00A3C2]/50">
+          <Avatar className="h-8 w-8 md:h-10 md:w-10 border border-blue">
             <AvatarImage src={profilePic.src} alt="Jashen Loberanes" />
             <AvatarFallback>JL</AvatarFallback>
           </Avatar>
@@ -84,9 +85,9 @@ export default function Navbar() {
                 );
                 ``;
               })}
+              <ThemeToggle/>
             </NavigationMenuList>
           </NavigationMenu>
-
           <Button className="rounded-full px-6 bg-[#00A3C2] hover:bg-[#00A3C2]/90 text-white text-xs font-bold uppercase tracking-widest transition-all active:scale-95">
             Get in Touch
           </Button>
