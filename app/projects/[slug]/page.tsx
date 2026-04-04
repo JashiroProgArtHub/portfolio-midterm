@@ -18,6 +18,21 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
         <Image src={project.image} alt={project.title} width={800} height={450} className="w-full h-full object-cover" />
       </div>  
       
+      <p className="text-muted-foreground mb-8">
+        {project.category} for {project.client}
+      </p>
+
+      <div className="relative rounded-2xl overflow-hidden bg-muted aspect-video mb-10">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill 
+          priority 
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 896px"
+        />
+      </div>
+
       <article className="prose lg:prose-xl">
         <p>Project details and case study content goes here...</p>
       </article>
