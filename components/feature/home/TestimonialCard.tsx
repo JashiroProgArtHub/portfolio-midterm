@@ -17,7 +17,7 @@ export function TestimonialCard({ quote, name, handle, image }: TestimonialProps
           <Quote className="w-8 h-8 text-[#00A3C2]/80 fill-[#00A3C2]/10 mb-4 opacity-60" />
           
           <p className="text-lg font-medium text-text-black leading-relaxed tracking-tight">
-            "{quote}"
+            &quot;{quote}&quot;
           </p>
         </CardContent>
       </Card>

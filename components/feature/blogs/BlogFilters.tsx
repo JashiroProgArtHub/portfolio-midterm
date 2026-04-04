@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState, useTransition } from "react"
+import { useState, useTransition } from "react"
 import { usePathname, useRouter } from "next/navigation"
 import { blogPosts } from "@/constants/blogs"
 import { Search, X, RotateCcw } from "lucide-react"
@@ -34,31 +34,24 @@ export default function BlogFilters() {
   const router = useRouter()
   const pathname = usePathname()
   const [searchQuery, setSearchQuery] = useState("")
-  const [activeCategory, setActiveCategory] = useState("All")
-  const [activeDate, setActiveDate] = useState("")
-  const [isPending, startTransition] = useTransition()
+  const [, startTransition] = useTransition()
 
-  useEffect(() => {
-    if (!pathname) return
+  
+  let activeCategory = "All"
+  const categoryMatch = pathname?.match(/^\/blogs\/category\/(.+)$/)
+  if (categoryMatch) {
+    const rawCategory = decodeURIComponent(categoryMatch[1]).toLowerCase()
+    const matchedCategory = categories.find(
+      (cat) => cat.toLowerCase() === rawCategory
+    )
+    activeCategory = matchedCategory ?? "All"
+  }
 
-    const categoryMatch = pathname.match(/^\/blogs\/category\/(.+)$/)
-    if (categoryMatch) {
-      const rawCategory = decodeURIComponent(categoryMatch[1]).toLowerCase()
-      const matchedCategory = categories.find(
-        (cat) => cat.toLowerCase() === rawCategory
-      )
-      setActiveCategory(matchedCategory ?? "All")
-    } else {
-      setActiveCategory("All")
-    }
-
-    const dateMatch = pathname.match(/^\/blogs\/date\/(.+)$/)
-    if (dateMatch) {
-      setActiveDate(dateMatch[1])
-    } else {
-      setActiveDate("")
-    }
-  }, [pathname])
+  let activeDate = ""
+  const dateMatch = pathname?.match(/^\/blogs\/date\/(.+)$/)
+  if (dateMatch) {
+    activeDate = dateMatch[1]
+  }
 
   const handleCategoryClick = (cat: string) => {
     startTransition(() => {
@@ -122,7 +115,7 @@ export default function BlogFilters() {
       </div>
 
       <div className="flex items-center gap-4 border-t border-border pt-6">
-        <Select onValueChange={handleDateChange}>
+        <Select onValueChange={handleDateChange} value={activeDate}>
           <SelectTrigger
             className={`w-52 h-10 rounded-lg text-xs font-semibold transition-colors focus:ring-0 focus:ring-offset-0 ${
               activeDate

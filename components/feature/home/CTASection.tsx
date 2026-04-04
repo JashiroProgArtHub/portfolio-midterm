@@ -12,7 +12,7 @@ export const CTASection = () => {
 
           <div className="relative z-10 space-y-6">
             <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-[0.2em] font-bold">
-              Let's Work Together
+              Let&apos;s Work Together
             </p>
 
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter text-text-black leading-[1.1]">
@@ -21,8 +21,8 @@ export const CTASection = () => {
             </h2>
 
             <p className="max-w-2xl mx-auto text-base md:text-lg text-text-dark-gray font-normal leading-relaxed">
-              Let's collaborate to build a high-performance digital foundation that 
-              doesn't just meet your current needs but evolves and scales alongside 
+              Let&apos;s collaborate to build a high-performance digital foundation that 
+              doesn&apos;t just meet your current needs but evolves and scales alongside 
               your loftiest ambitions.
             </p>
 

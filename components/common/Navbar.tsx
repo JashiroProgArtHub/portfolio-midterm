@@ -83,7 +83,7 @@ export default function Navbar() {
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 );
-                ``;
+                ;
               })}
               <ThemeToggle />
             </NavigationMenuList>

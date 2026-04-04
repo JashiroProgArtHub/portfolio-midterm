@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="space-y-6 z-10 md:ml-12 order-2 md:order-1 text-center md:text-left">
           <div className="inline-block border-l-2 border-[#00A3C2]/80 pl-6">
             <p className="text-[12px] md:text-sm font-bold text-[#00A3C2]/80 mb-2 uppercase tracking-[0.15em]">
-              Hey, I'm Jashen
+              Hey, I&apos;m Jashen
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] tracking-tighter text-text-black">
               <span>I </span>

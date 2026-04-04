@@ -34,10 +34,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background">
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system" suppressHydrationWarning>
-        <Navbar/>
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+          <Navbar />
           {children}
-          </ThemeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
