@@ -1,4 +1,4 @@
-"use client"; // Required for state in Next.js App Router
+"use client"; 
 
 import React, { useState } from 'react';
 import { Send, CheckCircle2, ArrowRight } from 'lucide-react';
@@ -21,10 +21,10 @@ export default function ContactForm() {
               Get In Touch
             </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-text-black leading-tight">
-              Let's build <span className="text-[#00A3C2]/80">something next.</span>
+              Let&apos;s build <span className="text-[#00A3C2]/80">something next.</span>
             </h2>
             <p className="text-lg text-text-dark-gray max-w-md leading-relaxed">
-              Have a project in mind? Drop a message and let's discuss the technical details of your next digital solution.
+              Have a project in mind? Drop a message and let&apos;s discuss the technical details of your next digital solution.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ export default function ContactForm() {
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold text-text-black">Message Sent!</h3>
                   <p className="text-text-dark-gray max-w-[280px] mx-auto">
-                    Thanks for reaching out. I'll review your details and get back to you shortly.
+                    Thanks for reaching out. I&apos;ll review your details and get back to you shortly.
                   </p>
                 </div>
                 <button 

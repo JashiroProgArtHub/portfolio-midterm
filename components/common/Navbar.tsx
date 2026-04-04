@@ -38,7 +38,7 @@ export default function Navbar() {
 <header
   className={cn(
     inter.className,
-    "fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl mx-auto rounded-full", // Changed to fixed
+    "fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl mx-auto rounded-full", 
     "backdrop-blur-md border border-darkblue text-text-black py-2 px-4 md:px-6 shadow-lg shadow-primary/4",
   )}
 >
@@ -83,7 +83,6 @@ export default function Navbar() {
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 );
-                ``;
               })}
               <ThemeToggle />
             </NavigationMenuList>
