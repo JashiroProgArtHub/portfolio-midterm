@@ -4,8 +4,8 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Inter } from "next/font/google";
-import { Menu } from "lucide-react"; 
-import {ThemeToggle} from "@/components/ui/theme-toggle"
+import { Menu } from "lucide-react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -35,13 +35,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header
-      className={cn(
-        inter.className,
-        "absolute top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl mx-auto rounded-full",
-        "backdrop-blur-md border border-darkblue text-text-black py-2 px-4 md:px-6 shadow-lg shadow-primary/4",
-      )}
-    >
+<header
+  className={cn(
+    inter.className,
+    "fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl mx-auto rounded-full", // Changed to fixed
+    "backdrop-blur-md border border-darkblue text-text-black py-2 px-4 md:px-6 shadow-lg shadow-primary/4",
+  )}
+>
       <div className="flex h-12 md:h-14 items-center justify-between">
         <Link
           href="/"
@@ -85,7 +85,7 @@ export default function Navbar() {
                 );
                 ``;
               })}
-              <ThemeToggle/>
+              <ThemeToggle />
             </NavigationMenuList>
           </NavigationMenu>
           <Button className="rounded-full px-6 bg-[#00A3C2] hover:bg-[#00A3C2]/90 text-white text-xs font-bold uppercase tracking-widest transition-all active:scale-95">
@@ -118,10 +118,12 @@ export default function Navbar() {
                   <AvatarFallback>JL</AvatarFallback>
                 </Avatar>
                 <div className="flex flex-col leading-tight">
-                <SheetTitle className="text-white text-sm font-bold tracking-tight whitespace-nowrap">Jashen Loberanes</SheetTitle>
-                <SheetDescription className="text-[10px]  text-[#00A3C2]/80 uppercase tracking-wider">
-                  Web Designer.
-                </SheetDescription>
+                  <SheetTitle className="text-white text-sm font-bold tracking-tight whitespace-nowrap">
+                    Jashen Loberanes
+                  </SheetTitle>
+                  <SheetDescription className="text-[10px]  text-[#00A3C2]/80 uppercase tracking-wider">
+                    Web Designer.
+                  </SheetDescription>
                 </div>
               </SheetHeader>
 

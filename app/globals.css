@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-
-
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -127,5 +125,9 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--text-greyish-cyan); 
     background-clip: content-box;
-} 
+  }
+  body *{
+    transition-property:  background-color, border-color, fill, stroke;
+    transition-duration: 300ms;
+  }
 }
