@@ -1,8 +1,3 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
 import { TestimonialCard } from "./TestimonialCard"
 import { testimonials } from "@/constants/testimonial" 
 
@@ -18,32 +13,17 @@ export function TestimonialSection() {
         </h2>
       </div>
       
-      <Carousel 
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        className="w-full"
-      >
-        <CarouselContent className="-ml-4 md:-ml-6">
-          {testimonials.map((t, i) => (
-            <CarouselItem key={i} className="pl-4 md:pl-6 md:basis-1/2 lg:basis-1/3">
-              <TestimonialCard 
-                quote={t.quote}
-                name={t.author}
-                handle={t.handle}
-                image={t.avatarUrl}
-              />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        
-        <div className="flex justify-center items-center gap-3 mt-16">
-          <div className="h-1.5 w-10 rounded-full bg-[#00A3C2]/80 transition-all shadow-sm" />
-          <div className="h-1.5 w-3 rounded-full bg-border hover:bg-[#00A3C2]/40 transition-colors cursor-pointer" />
-          <div className="h-1.5 w-3 rounded-full bg-border hover:bg-[#00A3C2]/40 transition-colors cursor-pointer" />
-        </div>
-      </Carousel>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {testimonials.map((t, i) => (
+          <TestimonialCard 
+            key={i}
+            quote={t.quote}
+            name={t.author}
+            handle={t.handle}
+            image={t.avatarUrl}
+          />
+        ))}
+      </div>
 
       <div className="absolute -top-24 -right-24 -z-10 w-96 h-96 bg-[#00A3C2]/5 blur-[120px] rounded-full" />
       <div className="absolute -bottom-24 -left-24 -z-10 w-72 h-72 bg-[#00A3C2]/5 blur-[100px] rounded-full" />
