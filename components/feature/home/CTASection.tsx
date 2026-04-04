@@ -6,14 +6,11 @@ export const CTASection = () => {
   return (
     <section className="w-full py-24 px-6 md:px-20 bg-background transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
-        {/* Container styled with your glassmorphic About/Service card style */}
         <div className="relative overflow-hidden bg-text-greyish-cyan/20 dark:bg-text-greyish-cyan/10 backdrop-blur-md rounded-2xl p-8 md:p-24 text-center shadow-sm border border-border">
           
-          {/* Brand Glow Effect */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 w-80 h-80 bg-[#00A3C2]/15 blur-[120px] rounded-full" />
 
           <div className="relative z-10 space-y-6">
-            {/* Consistent Sub-label */}
             <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-[0.2em] font-bold">
               Let's Work Together
             </p>

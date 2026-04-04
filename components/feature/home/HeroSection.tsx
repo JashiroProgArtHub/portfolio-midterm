@@ -9,7 +9,6 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen w-full bg-background text-foreground flex items-center px-6 md:px-20 py-20 md:py-0 overflow-hidden ">
       
-      {/* Sidebar Socials - Styled with Brand Cyan */}
       <div className="hidden md:flex absolute left-8 bottom-20 flex-col items-center gap-6">
         <div className="flex flex-col gap-4">
           <a href="#" className="text-text-gray hover:text-[#00A3C2] transition-colors"><FaFacebook size={20} /></a>
@@ -28,7 +27,6 @@ const HeroSection = () => {
         
         <div className="space-y-6 z-10 md:ml-12 order-2 md:order-1 text-center md:text-left">
           <div className="inline-block border-l-2 border-[#00A3C2]/80 pl-6">
-            {/* Sub-header matching About Section style */}
             <p className="text-[12px] md:text-sm font-bold text-[#00A3C2]/80 mb-2 uppercase tracking-[0.15em]">
               Hey, I'm Jashen
             </p>
@@ -50,7 +48,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Profile Image - Styled like your About Photo */}
         <div className="relative flex justify-center items-center order-1 md:order-2">
           <div className="relative w-full max-w-[280px] sm:max-w-sm aspect-square rounded-2xl overflow-hidden border-4 border-background shadow-shadow group">
             <Image 
@@ -59,17 +56,14 @@ const HeroSection = () => {
               className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110"
               priority
             />
-            {/* Subtle Overlay to match About banner vibe */}
             <div className="absolute inset-0 bg-[#00A3C2]/5 group-hover:bg-transparent transition-colors duration-500"></div>
           </div>
           
-          {/* Ambient Glows to match the Testimonial/Services background */}
           <div className="absolute -z-10 w-72 h-72 bg-[#00A3C2]/10 blur-[100px] rounded-full animate-pulse" />
           <div className="absolute -bottom-10 -right-10 -z-10 w-40 h-40 bg-primary/5 blur-[80px] rounded-full" />
         </div>
       </div>
       
-      {/* Mobile Socials */}
       <div className="flex md:hidden absolute bottom-8 left-0 right-0 justify-center gap-8 text-text-gray/60">
           <a href="#" className="hover:text-[#00A3C2]"><FaFacebook size={22} /></a>
           <a href="#" className="hover:text-[#00A3C2]"><FaInstagram size={22} /></a>

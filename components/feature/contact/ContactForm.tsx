@@ -8,7 +8,6 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Logic for form submission goes here (e.g., API call)
     setIsSubmitted(true);
   };
 
@@ -16,7 +15,6 @@ export default function ContactForm() {
     <section className="min-h-screen bg-background text-foreground p-6 flex items-center justify-center transition-colors duration-500">
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        {/* Content Side */}
         <div className="space-y-8">
           <div className="space-y-4">
             <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-[0.2em] font-bold">
@@ -43,15 +41,12 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Form / Success Side */}
         <div className="relative">
-          {/* Brand Glow Background */}
           <div className="absolute -inset-4 bg-[#00A3C2]/5 rounded-3xl blur-3xl -z-10"></div>
           
           <div className="relative bg-text-greyish-cyan/20 dark:bg-text-greyish-cyan/10 border border-border backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-sm min-h-[500px] flex flex-col justify-center transition-all hover:border-[#00A3C2]/30">
             
             {!isSubmitted ? (
-              /* THE FORM */
               <form onSubmit={handleSubmit} className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-6">
                 <div className="space-y-2">
                   <label className="text-[11px] uppercase tracking-wider font-bold text-[#00A3C2]/80 ml-1">Email Address</label>
@@ -80,7 +75,6 @@ export default function ContactForm() {
                 </button>
               </form>
             ) : (
-              /* SUCCESS STATE */
               <div className="text-center space-y-6 animate-in zoom-in-95 fade-in duration-500">
                 <div className="flex justify-center">
                   <div className="p-4 rounded-full bg-[#00A3C2]/10 border border-[#00A3C2]/20">
