@@ -125,17 +125,14 @@ const AboutSection = () => {
                 key={tool.name}
                 className="group relative flex flex-col items-center"
               >
-                {/* The Icon Container */}
                 <div className="p-3 bg-muted rounded-xl hover:bg-primary/10 transition-colors cursor-help text-2xl">
                   {tool.icon}
                 </div>
 
-                {/* The Tooltip - Shows on Group Hover */}
                 <div className="absolute bottom-full mb-2 hidden group-hover:flex flex-col items-center">
                   <span className="relative z-10 p-2 text-xs leading-none text-white whitespace-nowrap bg-gray-900 shadow-lg rounded-md">
                     {tool.name}
                   </span>
-                  {/* Small Triangle/Arrow */}
                   <div className="w-3 h-3 -mt-2 rotate-45 bg-gray-900"></div>
                 </div>
               </div>
