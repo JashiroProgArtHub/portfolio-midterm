@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const { name, email, message } = await req.json();
 
     const data = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // Use a verified domain later
+      from: 'Contact Form <onboarding@resend.dev>', 
       to: ['loberanesjashen22@gmail.com'],
       subject: `New Message from ${name}`,
       reply_to: email,

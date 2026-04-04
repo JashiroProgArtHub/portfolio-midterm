@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
-import { SiFigma, SiReact, SiCodeforces } from "react-icons/si"; // Using react-icons for consistency
+import { SiFigma, SiReact, SiCodeforces } from "react-icons/si"; 
 import ProjectImage from "@/public/parola=selfie=pfp.jpg"; 
 
 const services = [
@@ -29,7 +29,6 @@ export const ServicesSection = () => {
   return (
     <section className="py-24 px-6 md:px-20 bg-background">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header - Styled like About Text */}
         <div className="mb-12">
           <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-wider mb-2">
             What I Offer
@@ -46,7 +45,6 @@ export const ServicesSection = () => {
               className="group relative overflow-hidden border border-border rounded-2xl shadow-sm bg-text-greyish-cyan/20 dark:bg-text-greyish-cyan/10 transition-all duration-300 hover:border-[#00A3C2]/40"
             >
               <CardContent className="p-8">
-                {/* Icon & Title Container */}
                 <div className="flex items-center gap-4 mb-4">
                   <div className="p-3 bg-background rounded-xl text-[#00A3C2]/80 text-2xl border border-border group-hover:bg-primary/10 transition-colors">
                     {service.icon}
@@ -60,7 +58,6 @@ export const ServicesSection = () => {
                   {service.description}
                 </p>
                 
-                {/* Preview Image Container - Styled like your Banner */}
                 <div className="relative aspect-video rounded-xl overflow-hidden border border-border shadow-inner">
                   <Image 
                     src={ProjectImage} 
@@ -68,7 +65,6 @@ export const ServicesSection = () => {
                     className="object-cover w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
                   
-                  {/* Floating Action Button */}
                   <Link href="/projects">
                     <div className="absolute bottom-3 right-3 w-10 h-10 bg-[#00A3C2]/90 rounded-full flex items-center justify-center text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer backdrop-blur-md">
                       <ArrowUpRight size={20} />
@@ -80,7 +76,6 @@ export const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div className="flex justify-center mt-16">
           <Link href="/projects">
             <Button 

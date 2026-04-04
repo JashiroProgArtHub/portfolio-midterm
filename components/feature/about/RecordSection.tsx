@@ -27,7 +27,6 @@ export default function RecordSection() {
   return (
     <section className="py-24 px-6 md:px-20 bg-background transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header - Left Aligned for consistency */}
         <div className="mb-16">
           <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-[0.2em] font-bold mb-2">
             By The Numbers
@@ -47,12 +46,10 @@ export default function RecordSection() {
               key={stat.label} 
               className="group flex flex-col p-8 rounded-2xl border border-border bg-text-greyish-cyan/20 dark:bg-text-greyish-cyan/10 hover:border-[#00A3C2]/40 transition-all duration-300 shadow-sm"
             >
-              {/* Stat Value - Using Brand Cyan */}
               <span className="text-4xl md:text-5xl font-bold text-[#00A3C2]/80 mb-2 transition-transform duration-500 group-hover:scale-110">
                 {stat.value}
               </span>
               
-              {/* Label - Styled like your demographic profile keys */}
               <span className="text-[10px] md:text-[11px] uppercase tracking-widest font-bold text-text-black mb-4 after:content-[''] after:block after:h-[2px] after:w-6 after:bg-[#00A3C2]/80 after:mt-1">
                 {stat.label}
               </span>

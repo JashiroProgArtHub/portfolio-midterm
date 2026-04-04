@@ -21,7 +21,6 @@ const milestones = [
 export default function MilestoneSection() {
   return (
     <section className="max-w-7xl mx-auto py-24 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-      {/* Left Content - Matching Section Header Style */}
       <div className="space-y-4">
         <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-[0.2em] font-bold">
           My Journey
@@ -37,14 +36,11 @@ export default function MilestoneSection() {
         </p>
       </div>
 
-      {/* Right Content - Timeline with Glassmorphic Elements */}
       <div className="relative border-l-2 border-[#00A3C2]/20 ml-4 md:ml-0 pl-10 space-y-10">
         {milestones.map((item, idx) => (
           <div key={idx} className="relative group">
-            {/* The Animated Node matching your About Section shadow style */}
             <div className="absolute -left-[49px] top-1 w-4 h-4 rounded-full bg-[#00A3C2]/80 border-4 border-background shadow-shadow transition-transform duration-300 group-hover:scale-125" />
 
-            {/* Inner Content Card for scannability */}
             <div className="p-6 rounded-2xl border border-transparent hover:border-border hover:bg-text-greyish-cyan/20 dark:hover:bg-text-greyish-cyan/10 transition-all duration-300">
               <span className="text-[12px] font-bold text-[#00A3C2]/80 tracking-widest uppercase">
                 {item.year}
