@@ -31,7 +31,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background">
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system" >
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system" suppressHydrationWarning>
         <Navbar/>
           {children}
           </ThemeProvider>
