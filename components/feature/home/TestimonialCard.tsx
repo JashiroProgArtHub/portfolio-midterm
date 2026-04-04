@@ -11,28 +11,39 @@ interface TestimonialProps {
 
 export function TestimonialCard({ quote, name, handle, image }: TestimonialProps) {
   return (
-    <div className="relative flex flex-col gap-4 text-left">
-      <Card className="border border-border bg-background/50 backdrop-blur-sm shadow-none rounded-[2rem] p-4 lg:p-8">
-        <CardContent className="pt-6">
-          <Quote className="w-10 h-10 text-text-cyan opacity-20 fill-text-cyan mb-4" />
-          <p className="text-xl font-medium text-text-black leading-relaxed">
-            {quote}
+    <div className="relative flex flex-col gap-4 text-left group">
+      {/* Main Card - Styled with your glassmorphism and border colors */}
+      <Card className="border border-border bg-text-greyish-cyan/20 dark:bg-text-greyish-cyan/10 backdrop-blur-md shadow-sm rounded-2xl p-4 lg:p-6 transition-all duration-300 group-hover:border-[#00A3C2]/40">
+        <CardContent className="pt-4">
+          {/* Quote Icon using your brand accent color */}
+          <Quote className="w-8 h-8 text-[#00A3C2]/80 fill-[#00A3C2]/10 mb-4 opacity-60" />
+          
+          <p className="text-lg font-medium text-text-black leading-relaxed tracking-tight">
+            "{quote}"
           </p>
         </CardContent>
       </Card>
       
-      <div className="absolute -bottom-2 left-10 w-8 h-8 bg-background border-r border-b border-border rotate-45 -z-10" />
+      {/* Speech Bubble Tail - Color matched to card background */}
+      <div className="absolute -bottom-2 left-12 w-6 h-6 bg-[#f4fbfc] dark:bg-[#1a2b2e] border-r border-b border-border rotate-45 -z-10" />
 
-      <div className="flex items-center gap-3 px-6 mt-2">
-        <Avatar className="w-12 h-12 border-2 border-primary shadow-sm">
-          <AvatarImage src={image} alt={name} />
+      {/* User Info Section */}
+      <div className="flex items-center gap-3 px-8 mt-2">
+        <Avatar className="w-12 h-12 border-2 border-[#00A3C2]/80 shadow-shadow transition-transform duration-300 group-hover:scale-105">
+          <AvatarImage src={image} alt={name} className="object-cover" />
           <AvatarFallback className="bg-text-dark-gray text-white">
             {name?.charAt(0) || "U"}
           </AvatarFallback>
         </Avatar>
+        
         <div className="flex flex-col">
-          <span className="font-bold text-sm text-text-black">{name}</span>
-          <span className="text-xs text-text-gray">{handle}</span>
+          <span className="font-bold text-sm text-text-black tracking-tight">
+            {name}
+          </span>
+          {/* Sub-label using your brand cyan sub-header style */}
+          <span className="text-[10px] text-[#00A3C2]/80 uppercase tracking-wider font-medium">
+            {handle}
+          </span>
         </div>
       </div>
     </div>

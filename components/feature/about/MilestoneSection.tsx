@@ -1,3 +1,5 @@
+import React from 'react';
+
 const milestones = [
   {
     year: "2024",
@@ -18,34 +20,45 @@ const milestones = [
 
 export default function MilestoneSection() {
   return (
-    <div className="max-w-7xl mx-auto my-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-      <div>
-        <h2 className="text-3xl font-bold leading-tight">
-          Building a Better Way to{" "}
-          <span className="text-[#00A3C2]">Innovate</span>, One Milestone at a
+    <section className="max-w-7xl mx-auto py-24 px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+      {/* Left Content - Matching Section Header Style */}
+      <div className="space-y-4">
+        <p className="text-[10px] md:text-[12px] text-[#00A3C2]/80 uppercase tracking-[0.2em] font-bold">
+          My Journey
+        </p>
+        <h2 className="text-3xl md:text-5xl font-bold text-text-black leading-tight tracking-tight">
+          Building a Better Way to <br />
+          <span className="text-[#00A3C2]/80">Innovate</span>, One Milestone at a
           Time.
         </h2>
-        <p className="mt-4 text-text-dark-gray leading-relaxed">
+        <p className="max-w-md text-text-dark-gray leading-relaxed">
           From classroom projects to developing real-world management systems,
-          here is how my technical journey has evolved.
+          here is how my technical journey has evolved into high-end digital solutions.
         </p>
       </div>
 
-      <div className="relative border-l-2 border-[#00A3C2]/20 ml-4 md:ml-0 pl-8 space-y-12">
+      {/* Right Content - Timeline with Glassmorphic Elements */}
+      <div className="relative border-l-2 border-[#00A3C2]/20 ml-4 md:ml-0 pl-10 space-y-10">
         {milestones.map((item, idx) => (
-          <div key={idx} className="relative">
-            <div className="absolute -left-[41px] top-0 w-4 h-4 rounded-full bg-[#00A3C2] border-4 border-background shadow-[0_0_10px_#00A3C2]" />
+          <div key={idx} className="relative group">
+            {/* The Animated Node matching your About Section shadow style */}
+            <div className="absolute -left-[49px] top-1 w-4 h-4 rounded-full bg-[#00A3C2]/80 border-4 border-background shadow-shadow transition-transform duration-300 group-hover:scale-125" />
 
-            <span className="text-sm font-bold text-[#00A3C2] tracking-widest">
-              {item.year}
-            </span>
-            <h4 className="text-xl font-bold mt-1">{item.title}</h4>
-            <p className="text-text-dark-gray mt-2 leading-relaxed">
-              {item.desc}
-            </p>
+            {/* Inner Content Card for scannability */}
+            <div className="p-6 rounded-2xl border border-transparent hover:border-border hover:bg-text-greyish-cyan/20 dark:hover:bg-text-greyish-cyan/10 transition-all duration-300">
+              <span className="text-[12px] font-bold text-[#00A3C2]/80 tracking-widest uppercase">
+                {item.year}
+              </span>
+              <h4 className="text-xl font-bold mt-1 text-text-black group-hover:text-[#00A3C2] transition-colors">
+                {item.title}
+              </h4>
+              <p className="text-text-dark-gray mt-2 text-sm leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
