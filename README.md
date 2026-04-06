@@ -56,7 +56,7 @@ Following strict clean code practices, the project is organized into a modular f
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/portfolio-midterm.git
+   git clone https://github.com/JashiroProgArtHub/portfolio-midterm.git
    ```
 
 2. **Install dependencies:**
